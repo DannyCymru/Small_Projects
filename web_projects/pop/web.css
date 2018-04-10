@@ -1,0 +1,202 @@
+﻿body {
+
+	background-color: #e67e22;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+.maintext {
+
+	max-height: 20%;
+	max-width: 30%;
+	padding: 10px;
+
+}
+
+p {
+
+	padding: 10px;
+	font-family: arial, helvetica;
+}
+
+nav {
+
+	padding: 0.9em;
+	background-color: #ecf0f1;
+	text-align: center;
+	list-style: none;
+	font-family: arial, helvetica;
+}
+
+a:link {
+
+	text-decoration: none;
+	color: black;
+
+}
+
+a:visited {
+
+	color: black;
+
+}
+
+a:hover {
+
+	color:purple;
+
+}
+
+a:active {
+
+	color:red;
+
+}
+
+h1 {
+	padding: 10px;
+	font-family: arial, helvetica;
+	text-decoration: underline;
+}
+
+img {
+
+	position: absolute;
+	bottom: 50%;
+	right: 30%;
+	width: 30%;
+	height: 30%;
+}
+
+
+footer {
+
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+padding: 1rem;
+background-color: #efefef;
+
+}
+
+.foot {
+
+	padding-left: 4%;
+	text-align: center;
+
+}
+
+.contact_form {
+
+padding: 10px;
+
+}
+
+.vid_contain {
+
+	position: absolute;
+	left: 40%;
+	top: 15%;
+}
+
+.username, .password {
+
+margin-left: 2%;
+
+}
+
+.email-text, .password-text {
+
+	margin-left: 1%;
+}
+
+.container {
+ width: 500px;
+ clear: both;
+ margin-left: 1%;
+
+}
+
+.Register-Form input {
+	width: 50%;
+	-ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+    -webkit-box-sizing:content-box
+
+}
+
+.register_button {
+
+	width:14%;
+}
+
+.item1 {
+
+	position: absolute;
+	bottom: 25%;
+	right: 50%;
+	width: 70%;
+	height: 70%;
+
+}
+
+.buy {
+position: absolute;
+margin-left: 8%;
+margin-top: 240px;
+clear: both;
+
+}
+
+.price {
+	padding: 3%;
+}
+
+
+.item2 {
+
+	position: absolute;
+	bottom: 25%;
+	right: 34%;
+	width: 50%;
+	height: 70%;
+
+}
+
+.buy2 {
+position: absolute;
+margin-left: 35%;
+margin-top: 240px;
+clear: both;
+
+}
+
+.price1 {
+	padding: 3%;
+}
+
+.item3 {
+
+	position: absolute;
+	bottom: 25%;
+	right: 9%;
+	width: 50%;
+	height: 70%;
+
+}
+
+.buy3 {
+position: absolute;
+margin-left: 60%;
+margin-top: 240px;
+clear: both;
+
+}
+
+.price2 {
+
+	padding: 3%;
+}

@@ -1,0 +1,112 @@
+@font-face {
+
+	font-family: Code-Pro;
+	src: url("http://localhost/city/font/Code-Pro.otf");
+
+}
+
+body {
+
+	background-color: #34495e;
+	margin: 0;
+	padding: 0;
+}
+
+
+.logo {
+	position: relative;
+	right:20%;
+	max-width: auto;
+	max-height: 10em;
+
+  	width: auto;
+  	height: 4em;
+}
+
+nav {
+	font-family: Code-Pro;
+	background-color: #ecf0f1;
+	padding: 1%;
+	text-align: center;
+
+}
+
+nav a{
+	margin-left: 5%;
+	font-size: 120%;
+}
+
+nav a:link {
+
+	color: #f1c40f;
+	text-decoration: none;
+
+}
+
+nav a:visited {
+
+	color: purple;
+	text-decoration: none;
+
+
+}
+
+nav a:hover {
+
+	background-color: #36cf77;
+	text-decoration: none;
+	padding-bottom: 1.05%;
+	padding-top: 10%;
+	padding-left: 3%;
+	padding-right:3%;
+
+}
+
+footer {
+
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+padding: 1rem;
+background-color: #efefef;
+text-align: center;
+
+}
+
+.contact h1, .home h1 {
+
+font-family: 'Source Sans Pro', 'Ariel', sans-serif;
+font-size: 4em;
+color: white;
+padding-left: 1%;
+}
+
+.contact h3 {
+
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 2em;
+color: yellow;
+padding-left: 1%;
+
+}
+
+.contact h5, .contact p {
+
+font-family: 'Source Sans Pro','Ariel', sans-serif;
+font-size: 1em;
+color: red;
+max-width: 70%;
+padding-left: 1%;
+
+}
+
+.home ul {
+
+font-family: 'Source Sans Pro','Ariel', sans-serif;
+font-size: 2em;
+color: gold;
+max-width: 70%;
+padding-left: 3%;
+
+}

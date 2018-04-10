@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in *.zip
+do
+	mkdir "${i%.*}" && unzip "$i" -d ./"${i%.*}" && rm -rf "$i"
+done
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in *.rar
+do
+	mkdir "${i%.*}" && unrar e "$i" ./"${i%.*}" && rm -rf "$i"
+done
+
