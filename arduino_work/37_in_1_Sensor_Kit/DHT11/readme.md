@@ -20,10 +20,10 @@ For this you will also need an ardinuo, and other components such as breadboard 
 
 ![alt text](https://store-cdn.arduino.cc/usa/catalog/product/cache/1/image/520x330/604a3538c15e081937dbfbd20aa60aad/a/0/a000066_featured.jpg "arduino uno")
 
-##Library
+## Library
 
 To create the code example I used a library called DHTLib. I have provided a zip file of this library in the subdirectory. Incase it is out of date or new functions have been added you can download a copy from the original author [here](https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib)
 
-##Connection Diagram
+## Diagram
 
 ![alt text](http://www.circuitbasics.com/wp-content/uploads/2015/10/Arduino-DHT11-Tutorial-3-Pin-DHT11-Wiring-Diagram-1024x521.png "Diagram for installation")

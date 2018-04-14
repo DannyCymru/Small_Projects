@@ -25,8 +25,8 @@ You may buy an arduino from these retailers:
 
 [Arduino Authorised Distributors](https://store.arduino.cc/distributors)
 
-##Software
+## Software
 
-####Arduino IDE
+#### Arduino IDE
 
 The arduino IDE is necessary to open the .ino files as well to upload the code to your arduino product. [You may find it here.](https://www.arduino.cc/en/Main/Software)
