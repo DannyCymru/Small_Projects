@@ -4,7 +4,7 @@ Code example of how to use a DHT11 sensor for the Arduino. Simply download the D
 
 ## Pre-requisites
 
-To use this code there are a few prereuisites or provided library you will need a few different pieces of software and hardware
+Pre-requisistes needed to run the example or to use this specific component(s)
 
 ### Hardware
 
@@ -13,12 +13,6 @@ To use this code there are a few prereuisites or provided library you will need 
 The main thing you will need is this. A DHT11 sensor. This sensor, otherwise known as an temperature and humidity sensor. The provided library will only work with this type of sensor.
 
 ![alt text](https://www.tertiaryrobotics.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/h/dht11_temperature_and_humidity_sensor_module_for_arduino.jpg "DHT11")
-
-#### Arduino
-
-For this you will also need an ardinuo, and other components such as breadboard and jumper wires to correctly wire and connect the sensor.
-
-![alt text](https://store-cdn.arduino.cc/usa/catalog/product/cache/1/image/520x330/604a3538c15e081937dbfbd20aa60aad/a/0/a000066_featured.jpg "arduino uno")
 
 ## Library
 
