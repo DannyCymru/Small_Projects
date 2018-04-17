@@ -1,7 +1,5 @@
-//Pin you connected the component into. FOr me its pin 2.
+//Pin you connected the component into. For my set up its pin 3.
 int component_pin = 3;
-
-
 
 void setup() {
   //Tells the computer to start this serial monitor, we will be printing voltage data to this.
@@ -10,13 +8,12 @@ void setup() {
   pinMode(component_pin, OUTPUT);
 
   digitalWrite(component_pin, LOW); //Making sure its off on restart. Best to makesure you don't blind yourself
-
 }
 
 void loop() {
  
  digitalWrite(component_pin, HIGH); //On
- delay(1000);
+ delay(5000);
  
  //Needs to be defined here as we want the value when the light is turned on
  int volt = analogRead(A5); //Reads the analog data from the component, this gives us the information needed to calculate voltage
@@ -27,7 +24,6 @@ void loop() {
  Serial.println(voltage);
  
  digitalWrite(component_pin, LOW); //Off
- delay(1000);
-
+ delay(5000);
 
 }
