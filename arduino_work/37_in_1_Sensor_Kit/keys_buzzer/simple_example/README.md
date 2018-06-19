@@ -1,6 +1,6 @@
 ## Synopsis
 
-Very simple of example of how to connect and use the keyes joystick part for the arduino. 
+Very simple of example of how to connect and use the keyes buzzer parts for the arduino. 
 
 ## Pre-requisites
 
