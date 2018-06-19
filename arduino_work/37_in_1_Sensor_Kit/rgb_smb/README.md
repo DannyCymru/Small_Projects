@@ -14,7 +14,6 @@ The main thing you will need is the SMB full colour LED. Be careful witht his pa
 
 ![alt text](https://arduinomodules.info/wp-content/uploads/KY-009_RGB_full_color_LED_SMD_arduino_module-240x240.jpg "SMB")
 
-
 The below resistors are only needed to prevent burnout of the part. You can probably avoid using most of the resistors if you connect the part to now "~pwm" connectors, but if following the fritzing diagram this is highly recommended. 
 
 #### 180 OHM Resistor
@@ -30,3 +29,7 @@ The below resistors are only needed to prevent burnout of the part. You can prob
 The below diagram is how I configured it so that I could use both, utilising my lack of a bigger bread board. This set up, while it could be improved on will work. It will allow you to power the LCD and DHT11 module as well as post the DHT data to the LCD.
 
 ![alt text](RGB_LED_SMB.png "LED SMB diagram")
+
+This code will also work with the standard full colour RGB LED so I will also include a diagram for it below.
+
+![alt text](RGB_LED.png "LED SMB diagram")
