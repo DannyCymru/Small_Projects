@@ -25,10 +25,6 @@ The below resistors are only needed to prevent burnout of the part. You can prob
 
 ![alt text](https://www.palmar.co.ke/wp-content/uploads/2017/12/110-R-1-4w-500x500.jpg "110 Ohm resistor")
 
-## Library
-
-To create the code example I used a library called DHTLib. I have provided a zip file of this library in the subdirectory. Incase it is out of date or new functions have been added you can download a copy from the original author [here](https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib)
-
 ## Diagram
 
 The below diagram is how I configured it so that I could use both, utilising my lack of a bigger bread board. This set up, while it could be improved on will work. It will allow you to power the LCD and DHT11 module as well as post the DHT data to the LCD.
