@@ -8,7 +8,7 @@ void setup ()
 void loop ()
 {
     int raw_value = analogRead(a_input); //Gets the raw value from the input device.
-    double heart_rate = percentage * 0 + (1 - percentage) * raw_value; //Calculation to get heart rate, however this compent in general isn't very reliable.
+    double heart_rate = percentage * 0 + (1 - percentage) * raw_value; //Calculation to get heart rate, however this component in general isn't very reliable.
 
     Serial.print("Your heart rate is: ");
     Serial.println(heart_rate);
