@@ -24,9 +24,7 @@ The below resistors are only needed to prevent burnout of the part. You can prob
 
 ![alt text](https://www.palmar.co.ke/wp-content/uploads/2017/12/110-R-1-4w-500x500.jpg "110 Ohm resistor")
 
-## Diagram
-
-The below diagram is how I configured it so that I could use both, utilising my lack of a bigger bread board. This set up, while it could be improved on will work. It will allow you to power the LCD and DHT11 module as well as post the DHT data to the LCD.
+## Diagrams
 
 ![alt text](https://raw.githubusercontent.com/ErebusC/Small_Projects/master/arduino_work/37_in_1_Sensor_Kit/arduino_fritzing/RGB_LED_SMB.png "LED SMB diagram")
 
