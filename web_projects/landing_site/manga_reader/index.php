@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Manga Reader</title>
+		<title>
+			<?php 
+				include $_SERVER['DOCUMENT_ROOT'] . '/landing/sources/php/comic_lists.php';
+			?>
+		</title>
+		
 		<link rel="stylesheet" type="text/css" href="../../../sources/css/main.css">
 		<link rel="stylesheet" type="text/css" href="../../../sources/css/mangaReader.css">
-		<link rel="stylesheet" type="text/css" href="../../../sources/css/navBar.css">
+
 		<script type="text/javascript">
 
 			
@@ -25,6 +30,27 @@
 			}
 
 			function magnify() {
+
+				var modal = document.getElementById("iModal");
+
+				var img = document.getElementById("mPage");
+
+				var modalImg = document.getElementById("modalContent");
+
+				img.onclick =function(){
+
+					modal.style.display = "block";
+
+					modalImg.src = this.src;
+
+				}
+
+				var close = document.getElementById("close");
+
+				close.onclick = function() {
+
+					modal.style.display = "none";
+				}
 
 
 			}
@@ -76,6 +102,8 @@
 
 		</header>
 
+		<div class="content_container">
+
 		<div id="comicDropdown"> 
 	
 		<center>
@@ -85,19 +113,7 @@
 			<option value="" selected="">Comic</option>
 	
 			<?php
-
-			/*
-				This php script very simply fills the drop down with all the options in the selected directory.
-
-				Basically what the php script does is, for each file in the directory (The variable, $filename is blank, it just acts as a sort of container to be filled with the actual file names) then it prints the inputted html with the filename that the php script filled into the container variable.
-
-				basename($filename) acts as a way to strip any prefix or extra data from the $filename's. 
-
-			*/
-    			foreach(glob($_SERVER['DOCUMENT_ROOT'] . '/comics/*' , GLOB_ONLYDIR) as $filename){
-    			$filename = basename($filename);
-    			echo "<option value='" . 'https://' . $_SERVER['SERVER_NAME'] . '/comics/' . $filename . "'>".$filename."</option> \n";
-    			}
+				comics_dropdown();
 			?>
  
 		</select>
@@ -107,21 +123,17 @@
 			<option value = "" selected="">Volume/Chapter</option>
 
 			<?php
-
-				$chapter = basename(__DIR__);
+				$chapter = basename(dirname(__FILE__));
 				$chapterTrim = rtrim(__DIR__, $chapter);
 
 				$webAddress = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 				$chapterAddress = substr($webAddress, 0, -23);
 
-				foreach(glob( $chapterTrim . '/*') as $filename){
-    				$filename = basename($filename);
-        			echo "<option value='" . $chapterAddress . $filename . "'>".$filename. "</option> \n";
-
-    					}
-
+				foreach(glob( $chapterTrim . '/*', GLOB_ONLYDIR) as $filename){
+    			$filename = basename($filename);
+        		echo "<option value='" . $chapterAddress . $filename . "'>".$filename. "</option> \n";
+        		}
 			?>	
-
 
 		</select>
 
@@ -130,10 +142,7 @@
 			<option value="" selected="">Pages</option>
 	
 			<?php 
-       			foreach(glob(__DIR__ . '/*' . '.{jpg,png}', GLOB_BRACE) as $filename){
-    				$filename = basename($filename);
-        			echo "<option value='" . $webAddress . $filename . "'>".$filename. "</option> \n";
-    					}
+       			page_dropdown();
 			?>
 
 		</select>
@@ -149,10 +158,21 @@
 				<img id= "mPage" src='https://www.erebus.systems/landing/comics/All_Rounder_Meguru/All-Rounder_Meguru_V01/All-Rounder_Meguru_V01_000a.jpg' onclick="magnify()" >
 
 
-		<p>You can also use the left and right arrow keys to go back and forth between pages</p>
+				<p>You can also use the left and right arrow keys to go back and forth between pages</p>
 			</center>
 
+			<div id="iModal">
+
+				<div id="close">&times;</div>
+				
+				<img id="modalContent">
+
+
+			</div>
+
 	 	</div>
+
+	 </div>
 	
 	</body>
 </html>
