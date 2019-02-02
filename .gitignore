@@ -1,2 +1,6 @@
 
 *.save-failed
+
+Py-Zip/\.idea/
+
+Py-Zip/venv/
