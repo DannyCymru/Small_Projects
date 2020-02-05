@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>562</width>
+    <width>541</width>
     <height>322</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Gym Soft</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="gender_label">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -27,7 +27,7 @@
      <string>Gender: </string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="gender_combo">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -47,7 +47,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="weight_label">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -60,7 +60,7 @@
      <string>Weight: </string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="weight_edit">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -82,7 +82,7 @@
      <number>600</number>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox_2">
+   <widget class="QComboBox" name="weight_combo">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -102,7 +102,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="height_edit">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -124,12 +124,12 @@
      <number>600</number>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox_3">
+   <widget class="QComboBox" name="height_combo">
     <property name="geometry">
      <rect>
       <x>180</x>
       <y>140</y>
-      <width>93</width>
+      <width>131</width>
       <height>32</height>
      </rect>
     </property>
@@ -144,7 +144,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="height_label">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -157,7 +157,7 @@
      <string>Height:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="age_label">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -170,7 +170,7 @@
      <string>Age:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="age_edit">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -192,7 +192,7 @@
      <number>600</number>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox_4">
+   <widget class="QComboBox" name="exercise_combo">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -243,9 +243,9 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>320</x>
       <y>10</y>
-      <width>251</width>
+      <width>211</width>
       <height>161</height>
      </rect>
     </property>
@@ -255,7 +255,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="bmr_label">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -268,7 +268,7 @@
       <string>BMR:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_6">
+    <widget class="QLabel" name="bmi_label">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -281,7 +281,7 @@
       <string>BMI:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_7">
+    <widget class="QLabel" name="maintain_label">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -301,7 +301,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>562</width>
+     <width>541</width>
      <height>30</height>
     </rect>
    </property>

@@ -51,9 +51,11 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../gym_soft_v2/main.cpp \
-		../gym_soft_v2/mainwindow.cpp moc_mainwindow.cpp
+		../gym_soft_v2/mainwindow.cpp \
+		../gym_soft_v2/bm_calc.cpp moc_mainwindow.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
+		bm_calc.o \
 		moc_mainwindow.o
 DIST          = /usr/lib64/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib64/qt5/mkspecs/common/unix.conf \
@@ -212,6 +214,7 @@ DIST          = /usr/lib64/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib64/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib64/qt5/mkspecs/linux-g++/qmake.conf \
 		/usr/lib64/qt5/mkspecs/features/spec_post.prf \
+		../gym_soft_v2/.qmake.stash \
 		/usr/lib64/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib64/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib64/qt5/mkspecs/features/default_pre.prf \
@@ -231,8 +234,10 @@ DIST          = /usr/lib64/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib64/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib64/qt5/mkspecs/features/yacc.prf \
 		/usr/lib64/qt5/mkspecs/features/lex.prf \
-		../gym_soft_v2/gym_soft_v2.pro ../gym_soft_v2/mainwindow.h ../gym_soft_v2/main.cpp \
-		../gym_soft_v2/mainwindow.cpp
+		../gym_soft_v2/gym_soft_v2.pro ../gym_soft_v2/mainwindow.h \
+		../gym_soft_v2/bm_calc.h ../gym_soft_v2/main.cpp \
+		../gym_soft_v2/mainwindow.cpp \
+		../gym_soft_v2/bm_calc.cpp
 QMAKE_TARGET  = gym_soft_v2
 DESTDIR       = 
 TARGET        = gym_soft_v2
@@ -401,6 +406,7 @@ Makefile: ../gym_soft_v2/gym_soft_v2.pro /usr/lib64/qt5/mkspecs/linux-g++/qmake.
 		/usr/lib64/qt5/mkspecs/features/qt_config.prf \
 		/usr/lib64/qt5/mkspecs/linux-g++/qmake.conf \
 		/usr/lib64/qt5/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/usr/lib64/qt5/mkspecs/features/exclusive_builds.prf \
 		/usr/lib64/qt5/mkspecs/features/toolchain.prf \
 		/usr/lib64/qt5/mkspecs/features/default_pre.prf \
@@ -582,6 +588,7 @@ Makefile: ../gym_soft_v2/gym_soft_v2.pro /usr/lib64/qt5/mkspecs/linux-g++/qmake.
 /usr/lib64/qt5/mkspecs/features/qt_config.prf:
 /usr/lib64/qt5/mkspecs/linux-g++/qmake.conf:
 /usr/lib64/qt5/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /usr/lib64/qt5/mkspecs/features/exclusive_builds.prf:
 /usr/lib64/qt5/mkspecs/features/toolchain.prf:
 /usr/lib64/qt5/mkspecs/features/default_pre.prf:
@@ -620,8 +627,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib64/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../gym_soft_v2/mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../gym_soft_v2/main.cpp ../gym_soft_v2/mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../gym_soft_v2/mainwindow.h ../gym_soft_v2/bm_calc.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../gym_soft_v2/main.cpp ../gym_soft_v2/mainwindow.cpp ../gym_soft_v2/bm_calc.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../gym_soft_v2/mainwindow.ui $(DISTDIR)/
 
 
@@ -687,6 +694,9 @@ main.o: ../gym_soft_v2/main.cpp ../gym_soft_v2/mainwindow.h
 mainwindow.o: ../gym_soft_v2/mainwindow.cpp ../gym_soft_v2/mainwindow.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../gym_soft_v2/mainwindow.cpp
+
+bm_calc.o: ../gym_soft_v2/bm_calc.cpp ../gym_soft_v2/bm_calc.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o bm_calc.o ../gym_soft_v2/bm_calc.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

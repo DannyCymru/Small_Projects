@@ -36,22 +36,22 @@ public:
     QAction *actionOpen;
     QAction *actionExit;
     QWidget *centralWidget;
-    QLabel *label;
-    QComboBox *comboBox;
-    QLabel *label_2;
-    QLineEdit *lineEdit;
-    QComboBox *comboBox_2;
-    QLineEdit *lineEdit_2;
-    QComboBox *comboBox_3;
-    QLabel *label_3;
-    QLabel *label_4;
-    QLineEdit *lineEdit_3;
-    QComboBox *comboBox_4;
+    QLabel *gender_label;
+    QComboBox *gender_combo;
+    QLabel *weight_label;
+    QLineEdit *weight_edit;
+    QComboBox *weight_combo;
+    QLineEdit *height_edit;
+    QComboBox *height_combo;
+    QLabel *height_label;
+    QLabel *age_label;
+    QLineEdit *age_edit;
+    QComboBox *exercise_combo;
     QPushButton *pushButton;
     QFrame *frame;
-    QLabel *label_5;
-    QLabel *label_6;
-    QLabel *label_7;
+    QLabel *bmr_label;
+    QLabel *bmi_label;
+    QLabel *maintain_label;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QMenu *menuWindow;
@@ -62,7 +62,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(562, 322);
+        MainWindow->resize(541, 322);
         actionNew = new QAction(MainWindow);
         actionNew->setObjectName(QStringLiteral("actionNew"));
         actionSave = new QAction(MainWindow);
@@ -75,69 +75,69 @@ public:
         actionExit->setObjectName(QStringLiteral("actionExit"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(20, 20, 53, 31));
-        comboBox = new QComboBox(centralWidget);
-        comboBox->setObjectName(QStringLiteral("comboBox"));
-        comboBox->setGeometry(QRect(90, 20, 76, 32));
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(20, 100, 51, 31));
-        lineEdit = new QLineEdit(centralWidget);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setEnabled(true);
-        lineEdit->setGeometry(QRect(90, 100, 81, 32));
-        lineEdit->setMaximumSize(QSize(210, 32));
-        lineEdit->setMaxLength(600);
-        comboBox_2 = new QComboBox(centralWidget);
-        comboBox_2->setObjectName(QStringLiteral("comboBox_2"));
-        comboBox_2->setGeometry(QRect(180, 100, 93, 32));
-        lineEdit_2 = new QLineEdit(centralWidget);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
-        lineEdit_2->setEnabled(true);
-        lineEdit_2->setGeometry(QRect(90, 140, 81, 32));
-        lineEdit_2->setMaximumSize(QSize(210, 32));
-        lineEdit_2->setMaxLength(600);
-        comboBox_3 = new QComboBox(centralWidget);
-        comboBox_3->setObjectName(QStringLiteral("comboBox_3"));
-        comboBox_3->setGeometry(QRect(180, 140, 93, 32));
-        label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(20, 140, 51, 31));
-        label_4 = new QLabel(centralWidget);
-        label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(40, 60, 31, 31));
-        lineEdit_3 = new QLineEdit(centralWidget);
-        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
-        lineEdit_3->setEnabled(true);
-        lineEdit_3->setGeometry(QRect(90, 60, 81, 32));
-        lineEdit_3->setMaximumSize(QSize(210, 32));
-        lineEdit_3->setMaxLength(600);
-        comboBox_4 = new QComboBox(centralWidget);
-        comboBox_4->setObjectName(QStringLiteral("comboBox_4"));
-        comboBox_4->setGeometry(QRect(20, 180, 511, 41));
+        gender_label = new QLabel(centralWidget);
+        gender_label->setObjectName(QStringLiteral("gender_label"));
+        gender_label->setGeometry(QRect(20, 20, 53, 31));
+        gender_combo = new QComboBox(centralWidget);
+        gender_combo->setObjectName(QStringLiteral("gender_combo"));
+        gender_combo->setGeometry(QRect(90, 20, 76, 32));
+        weight_label = new QLabel(centralWidget);
+        weight_label->setObjectName(QStringLiteral("weight_label"));
+        weight_label->setGeometry(QRect(20, 100, 51, 31));
+        weight_edit = new QLineEdit(centralWidget);
+        weight_edit->setObjectName(QStringLiteral("weight_edit"));
+        weight_edit->setEnabled(true);
+        weight_edit->setGeometry(QRect(90, 100, 81, 32));
+        weight_edit->setMaximumSize(QSize(210, 32));
+        weight_edit->setMaxLength(600);
+        weight_combo = new QComboBox(centralWidget);
+        weight_combo->setObjectName(QStringLiteral("weight_combo"));
+        weight_combo->setGeometry(QRect(180, 100, 93, 32));
+        height_edit = new QLineEdit(centralWidget);
+        height_edit->setObjectName(QStringLiteral("height_edit"));
+        height_edit->setEnabled(true);
+        height_edit->setGeometry(QRect(90, 140, 81, 32));
+        height_edit->setMaximumSize(QSize(210, 32));
+        height_edit->setMaxLength(600);
+        height_combo = new QComboBox(centralWidget);
+        height_combo->setObjectName(QStringLiteral("height_combo"));
+        height_combo->setGeometry(QRect(180, 140, 131, 32));
+        height_label = new QLabel(centralWidget);
+        height_label->setObjectName(QStringLiteral("height_label"));
+        height_label->setGeometry(QRect(20, 140, 51, 31));
+        age_label = new QLabel(centralWidget);
+        age_label->setObjectName(QStringLiteral("age_label"));
+        age_label->setGeometry(QRect(40, 60, 31, 31));
+        age_edit = new QLineEdit(centralWidget);
+        age_edit->setObjectName(QStringLiteral("age_edit"));
+        age_edit->setEnabled(true);
+        age_edit->setGeometry(QRect(90, 60, 81, 32));
+        age_edit->setMaximumSize(QSize(210, 32));
+        age_edit->setMaxLength(600);
+        exercise_combo = new QComboBox(centralWidget);
+        exercise_combo->setObjectName(QStringLiteral("exercise_combo"));
+        exercise_combo->setGeometry(QRect(20, 180, 511, 41));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(20, 230, 88, 34));
         frame = new QFrame(centralWidget);
         frame->setObjectName(QStringLiteral("frame"));
-        frame->setGeometry(QRect(280, 10, 251, 161));
+        frame->setGeometry(QRect(320, 10, 211, 161));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
-        label_5 = new QLabel(frame);
-        label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(10, 10, 58, 18));
-        label_6 = new QLabel(frame);
-        label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setGeometry(QRect(10, 30, 58, 18));
-        label_7 = new QLabel(frame);
-        label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setGeometry(QRect(10, 50, 141, 20));
+        bmr_label = new QLabel(frame);
+        bmr_label->setObjectName(QStringLiteral("bmr_label"));
+        bmr_label->setGeometry(QRect(10, 10, 58, 18));
+        bmi_label = new QLabel(frame);
+        bmi_label->setObjectName(QStringLiteral("bmi_label"));
+        bmi_label->setGeometry(QRect(10, 30, 58, 18));
+        maintain_label = new QLabel(frame);
+        maintain_label->setObjectName(QStringLiteral("maintain_label"));
+        maintain_label->setGeometry(QRect(10, 50, 141, 20));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 562, 30));
+        menuBar->setGeometry(QRect(0, 0, 541, 30));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QStringLiteral("menuFile"));
         menuWindow = new QMenu(menuBar);
@@ -168,33 +168,33 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Gym Soft", Q_NULLPTR));
         actionNew->setText(QApplication::translate("MainWindow", "New", Q_NULLPTR));
         actionSave->setText(QApplication::translate("MainWindow", "Save", Q_NULLPTR));
         actionPrint->setText(QApplication::translate("MainWindow", "Print", Q_NULLPTR));
         actionOpen->setText(QApplication::translate("MainWindow", "Open", Q_NULLPTR));
         actionExit->setText(QApplication::translate("MainWindow", "Exit", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindow", "Gender: ", Q_NULLPTR));
-        comboBox->clear();
-        comboBox->insertItems(0, QStringList()
+        gender_label->setText(QApplication::translate("MainWindow", "Gender: ", Q_NULLPTR));
+        gender_combo->clear();
+        gender_combo->insertItems(0, QStringList()
          << QApplication::translate("MainWindow", "Male", Q_NULLPTR)
          << QApplication::translate("MainWindow", "Female", Q_NULLPTR)
         );
-        label_2->setText(QApplication::translate("MainWindow", "Weight: ", Q_NULLPTR));
-        comboBox_2->clear();
-        comboBox_2->insertItems(0, QStringList()
+        weight_label->setText(QApplication::translate("MainWindow", "Weight: ", Q_NULLPTR));
+        weight_combo->clear();
+        weight_combo->insertItems(0, QStringList()
          << QApplication::translate("MainWindow", "Kilograms", Q_NULLPTR)
          << QApplication::translate("MainWindow", "Pounds", Q_NULLPTR)
         );
-        comboBox_3->clear();
-        comboBox_3->insertItems(0, QStringList()
+        height_combo->clear();
+        height_combo->insertItems(0, QStringList()
          << QApplication::translate("MainWindow", "CM", Q_NULLPTR)
          << QApplication::translate("MainWindow", "Feet and Inches", Q_NULLPTR)
         );
-        label_3->setText(QApplication::translate("MainWindow", "Height:", Q_NULLPTR));
-        label_4->setText(QApplication::translate("MainWindow", "Age:", Q_NULLPTR));
-        comboBox_4->clear();
-        comboBox_4->insertItems(0, QStringList()
+        height_label->setText(QApplication::translate("MainWindow", "Height:", Q_NULLPTR));
+        age_label->setText(QApplication::translate("MainWindow", "Age:", Q_NULLPTR));
+        exercise_combo->clear();
+        exercise_combo->insertItems(0, QStringList()
          << QApplication::translate("MainWindow", "Do you do little to no exercise", Q_NULLPTR)
          << QApplication::translate("MainWindow", "Light exercise (1-3 day per week)", Q_NULLPTR)
          << QApplication::translate("MainWindow", "Moderate exercise (3-5 days per week)", Q_NULLPTR)
@@ -202,9 +202,9 @@ public:
          << QApplication::translate("MainWindow", "Very heavy exercise (twice per day, extra heavy workouts)", Q_NULLPTR)
         );
         pushButton->setText(QApplication::translate("MainWindow", "Go", Q_NULLPTR));
-        label_5->setText(QApplication::translate("MainWindow", "BMR:", Q_NULLPTR));
-        label_6->setText(QApplication::translate("MainWindow", "BMI:", Q_NULLPTR));
-        label_7->setText(QApplication::translate("MainWindow", "Calories to maintain:", Q_NULLPTR));
+        bmr_label->setText(QApplication::translate("MainWindow", "BMR:", Q_NULLPTR));
+        bmi_label->setText(QApplication::translate("MainWindow", "BMI:", Q_NULLPTR));
+        maintain_label->setText(QApplication::translate("MainWindow", "Calories to maintain:", Q_NULLPTR));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", Q_NULLPTR));
         menuWindow->setTitle(QApplication::translate("MainWindow", "Window", Q_NULLPTR));
         menuHelp->setTitle(QApplication::translate("MainWindow", "Help", Q_NULLPTR));
