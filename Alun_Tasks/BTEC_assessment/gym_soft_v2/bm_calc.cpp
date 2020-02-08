@@ -26,14 +26,17 @@ double bm_calc::bmr_calc(double weight, double height, double age, QString gende
         gender_age = 5.677;
 
     }
-    else if (gender == "female") {
+    else if (gender == "Female") {
         gender_bmr = 447.593;
         gender_weight = 9.247;
         gender_height = 3.098;
         gender_age = 4.330;
     }
 
-    bmr = (gender_bmr + (gender_weight*weight)+(gender_height*height) - (gender_age * age));
+    bmr = (gender_bmr +
+          (gender_weight*weight) +
+          (gender_height*height) -
+          (gender_age * age));
     return bmr;
 };
 

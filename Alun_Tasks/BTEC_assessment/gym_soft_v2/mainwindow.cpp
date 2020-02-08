@@ -8,8 +8,7 @@ QString gender, met_or_imp;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
-{
+    ui(new Ui::MainWindow){
     ui->setupUi(this);
     b_c = new bm_calc();
 
@@ -20,8 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow(){
     delete ui;
 }
 
@@ -47,7 +45,6 @@ void MainWindow::on_height_combo_currentIndexChanged(const QString &arg1){
         ui->weight_combo->setCurrentIndex(0);
         met_or_imp = "imperial";
     }
-
 }
 
 void MainWindow::entered_values(){
@@ -58,33 +55,54 @@ void MainWindow::entered_values(){
 }
 
 void MainWindow::bmi(){
-    //BMI
     double bmi=b_c->bmi_calc(weight, u_height);
-    QString bmi_to_string = QString::number(bmi);
     QString new_bmi = QString("BMI is: %1").arg(bmi);
     ui->bmi_label->setText(new_bmi);
-
 }
 
-void MainWindow::bmr(){
-    //BMR
+double MainWindow::bmr(double exercise_level){
     double bmr=b_c->bmr_calc(weight, u_height, age, gender);
-    QString bmr_to_string = QString::number(bmr);
     QString new_bmr = QString("BMR is: %1").arg(bmr);
     ui->bmr_label->setText(new_bmr);
 
+    double kilocal = bmr * exercise_level;
+    return kilocal;
 }
 
-void MainWindow::on_run_clicked()
-{
+void MainWindow::kilocal(){
 
+    QString kilo_to_string;
+
+    switch (ui->exercise_combo->currentIndex()) {
+    case 0 :
+        kilo_to_string = QString("Calories to maintain: %1").arg(bmr(1.2));
+        ui->maintain_label->setText(kilo_to_string);
+        break;
+    case 1 :
+        kilo_to_string = QString("Calories to maintain: %1").arg(bmr(1.375));
+        ui->maintain_label->setText(kilo_to_string);
+        break;
+    case 2 :
+        kilo_to_string = QString("Calories to maintain: %1").arg(bmr(1.55));
+        ui->maintain_label->setText(kilo_to_string);
+        break;
+    case 3 :
+        kilo_to_string = QString("Calories to maintain: %1").arg(bmr(1.725));
+        ui->maintain_label->setText(kilo_to_string);
+        break;
+    case 4 :
+        kilo_to_string = QString("Calories to maintain: %1").arg(bmr(1.9));
+        ui->maintain_label->setText(kilo_to_string);
+        break;
+    }
+}
+
+void MainWindow::on_run_clicked(){
     //Sets the variables to the values entered by the user.
     entered_values();
 
     //Conversions and calculations
     bmi();
-    bmr();
-
-
+    kilocal();
 }
 

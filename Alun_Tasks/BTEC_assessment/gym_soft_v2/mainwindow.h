@@ -30,8 +30,9 @@ private:
     bm_calc *b_c;
 
     void entered_values();
-    void bmr();
+    double bmr(double exercise_level);
     void bmi();
+    void kilocal();
 
 };
 
