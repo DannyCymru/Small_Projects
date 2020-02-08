@@ -37,7 +37,7 @@ void MainWindow::on_weight_combo_currentIndexChanged(const QString &arg1){
     }
 }
 
-QString MainWindow::on_height_combo_currentIndexChanged(const QString &arg1){
+void MainWindow::on_height_combo_currentIndexChanged(const QString &arg1){
     QString current_text = ui->height_combo->currentText();
     if( current_text == "Feet and Inches"){
         ui->weight_combo->setCurrentIndex(1);
@@ -48,7 +48,6 @@ QString MainWindow::on_height_combo_currentIndexChanged(const QString &arg1){
         met_or_imp = "imperial";
     }
 
-    return
 }
 
 void MainWindow::entered_values(){
