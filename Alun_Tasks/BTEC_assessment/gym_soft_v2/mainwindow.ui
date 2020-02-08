@@ -32,7 +32,7 @@
      <rect>
       <x>90</x>
       <y>20</y>
-      <width>76</width>
+      <width>71</width>
       <height>32</height>
      </rect>
     </property>
@@ -60,28 +60,6 @@
      <string>Weight: </string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="weight_edit">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>100</y>
-      <width>81</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>210</width>
-      <height>32</height>
-     </size>
-    </property>
-    <property name="maxLength">
-     <number>600</number>
-    </property>
-   </widget>
    <widget class="QComboBox" name="weight_combo">
     <property name="geometry">
      <rect>
@@ -101,28 +79,6 @@
       <string>Pounds</string>
      </property>
     </item>
-   </widget>
-   <widget class="QLineEdit" name="height_edit">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>140</y>
-      <width>81</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>210</width>
-      <height>32</height>
-     </size>
-    </property>
-    <property name="maxLength">
-     <number>600</number>
-    </property>
    </widget>
    <widget class="QComboBox" name="height_combo">
     <property name="geometry">
@@ -170,28 +126,6 @@
      <string>Age:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="age_edit">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>60</y>
-      <width>81</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>210</width>
-      <height>32</height>
-     </size>
-    </property>
-    <property name="maxLength">
-     <number>600</number>
-    </property>
-   </widget>
    <widget class="QComboBox" name="exercise_combo">
     <property name="geometry">
      <rect>
@@ -227,7 +161,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="run">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -260,12 +194,12 @@
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>58</width>
+       <width>191</width>
        <height>18</height>
       </rect>
      </property>
      <property name="text">
-      <string>BMR:</string>
+      <string>BMR is:</string>
      </property>
     </widget>
     <widget class="QLabel" name="bmi_label">
@@ -273,12 +207,12 @@
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>58</width>
+       <width>191</width>
        <height>18</height>
       </rect>
      </property>
      <property name="text">
-      <string>BMI:</string>
+      <string>BMI is:</string>
      </property>
     </widget>
     <widget class="QLabel" name="maintain_label">
@@ -294,6 +228,48 @@
       <string>Calories to maintain:</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QDoubleSpinBox" name="age_spinbox">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>60</y>
+      <width>71</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="decimals">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="weight_spinbox">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>100</y>
+      <width>71</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="decimals">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="height_spinbox">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>140</y>
+      <width>71</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="decimals">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <double>250.000000000000000</double>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
