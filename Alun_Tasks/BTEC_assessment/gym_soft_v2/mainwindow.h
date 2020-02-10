@@ -30,9 +30,10 @@ private:
     bm_calc *b_c;
 
     void entered_values();
-    double bmr(double exercise_level);
-    void bmi();
+    void bmi_label(double bmi);
+    void bmr_label(double bmr);
     void kilocal();
+    void kilo_label(double kilo_cal);
 
 };
 

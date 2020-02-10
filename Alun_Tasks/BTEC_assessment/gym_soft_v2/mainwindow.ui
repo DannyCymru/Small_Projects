@@ -96,7 +96,7 @@
     </item>
     <item>
      <property name="text">
-      <string>Feet and Inches</string>
+      <string>Inches</string>
      </property>
     </item>
    </widget>
@@ -241,6 +241,9 @@
     <property name="decimals">
      <number>0</number>
     </property>
+    <property name="minimum">
+     <double>14.000000000000000</double>
+    </property>
    </widget>
    <widget class="QDoubleSpinBox" name="weight_spinbox">
     <property name="geometry">
@@ -253,6 +256,12 @@
     </property>
     <property name="decimals">
      <number>0</number>
+    </property>
+    <property name="minimum">
+     <double>30.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>250.000000000000000</double>
     </property>
    </widget>
    <widget class="QDoubleSpinBox" name="height_spinbox">
@@ -267,8 +276,11 @@
     <property name="decimals">
      <number>0</number>
     </property>
+    <property name="minimum">
+     <double>0.000000000000000</double>
+    </property>
     <property name="maximum">
-     <double>250.000000000000000</double>
+     <double>210.000000000000000</double>
     </property>
    </widget>
   </widget>

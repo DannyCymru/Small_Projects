@@ -120,15 +120,19 @@ public:
         age_spinbox->setObjectName(QStringLiteral("age_spinbox"));
         age_spinbox->setGeometry(QRect(90, 60, 71, 32));
         age_spinbox->setDecimals(0);
+        age_spinbox->setMinimum(14);
         weight_spinbox = new QDoubleSpinBox(centralWidget);
         weight_spinbox->setObjectName(QStringLiteral("weight_spinbox"));
         weight_spinbox->setGeometry(QRect(90, 100, 71, 32));
         weight_spinbox->setDecimals(0);
+        weight_spinbox->setMinimum(30);
+        weight_spinbox->setMaximum(250);
         height_spinbox = new QDoubleSpinBox(centralWidget);
         height_spinbox->setObjectName(QStringLiteral("height_spinbox"));
         height_spinbox->setGeometry(QRect(90, 140, 71, 32));
         height_spinbox->setDecimals(0);
-        height_spinbox->setMaximum(250);
+        height_spinbox->setMinimum(0);
+        height_spinbox->setMaximum(210);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -184,7 +188,7 @@ public:
         height_combo->clear();
         height_combo->insertItems(0, QStringList()
          << QApplication::translate("MainWindow", "CM", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "Feet and Inches", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "Inches", Q_NULLPTR)
         );
         height_label->setText(QApplication::translate("MainWindow", "Height:", Q_NULLPTR));
         age_label->setText(QApplication::translate("MainWindow", "Age:", Q_NULLPTR));
