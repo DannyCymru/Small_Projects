@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
+#include <QFileDialog>
+#include <QMessageBox>
 
 
 double age, weight, u_height, bmi, bmr, kilo_cal;
@@ -108,3 +110,89 @@ void MainWindow::on_run_clicked(){
     kilo_label(kilo_cal);
 }
 
+
+void MainWindow::on_actionExit_triggered(){
+    QApplication::quit();
+}
+
+//Clears all the variables and ui elements to allow for a fresh gui to interact with
+void MainWindow::on_actionNew_triggered()
+{
+    weight = 30;
+    u_height = 0;
+    met_or_imp = "Metric";
+    bmi = 0;
+    bmr = 0;
+    age = 0;
+    kilo_cal = 0;
+
+    ui->age_spinbox->clear();
+    ui->weight_spinbox->clear();
+    ui-> weight_combo->setCurrentIndex(0);
+    ui->height_spinbox->clear();
+    ui->height_combo->setCurrentIndex(0);
+    ui->gender_combo->setCurrentIndex(0);
+    ui->gender_label->clear();
+    ui->bmi_label->clear();
+    ui->bmr_label->clear();
+    ui->exercise_combo->clear();
+    ui->maintain_label->clear();
+}
+
+void MainWindow::save_to_file(){
+    QString file_name = QFileDialog::getSaveFileName(this,
+                                                     tr("Save fitness data"), "",
+                                                     tr("Fitness File (*.fit);; All Files (*)"));
+    if(file_name.isEmpty())
+        return;
+    else{
+        QFile file(file_name);
+        if(!file.open(QIODevice::WriteOnly)) {
+            QMessageBox::information(this, tr("Unable to open file"),
+                                     file.errorString());
+            return;
+        }
+
+        QDataStream out(&file);
+        out.setVersion(QDataStream::Qt_5_0);
+        out << ui->bmi_label->text();
+    }
+}
+
+void MainWindow::load_from_file(){
+    QString file_name = QFileDialog::getOpenFileName(this, tr("Open fitness file"), "", tr("Fitness file (*.fit);;All Files (*)"));
+    if (file_name.isEmpty()){
+            return;
+    }
+            else {
+            QFile file(file_name);
+            qDebug() << file_name;
+            if (!file.open(QIODevice::ReadOnly)) {
+            QMessageBox::information(this, tr("Unable to open file"),
+                                     file.errorString());
+            return;
+}
+            QDataStream in(&file);
+            in.setVersion(QDataStream::Qt_5_0);
+            ui->bmi_label->clear();
+            QString bmi_label_in;
+            in >> bmi_label_in;
+
+            if(bmi_label_in.isEmpty()){
+                QMessageBox::information(this, tr("No data in file"),tr("The file you are attempting to open contains no data "));
+            } else {
+                ui->bmi_label->setText(bmi_label_in);
+            }
+
+    }
+}
+
+void MainWindow::on_actionSave_triggered()
+{
+    save_to_file();
+}
+
+void MainWindow::on_actionOpen_triggered()
+{
+    load_from_file();
+}

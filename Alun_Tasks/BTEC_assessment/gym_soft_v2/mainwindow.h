@@ -25,6 +25,14 @@ private slots:
     void on_run_clicked();
 
 
+    void on_actionExit_triggered();
+
+    void on_actionNew_triggered();
+
+    void on_actionSave_triggered();
+
+    void on_actionOpen_triggered();
+
 private:
     Ui::MainWindow *ui;
     bm_calc *b_c;
@@ -34,6 +42,8 @@ private:
     void bmr_label(double bmr);
     void kilocal();
     void kilo_label(double kilo_cal);
+    void load_from_file();
+    void save_to_file();
 
 };
 

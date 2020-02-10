@@ -290,7 +290,7 @@
      <x>0</x>
      <y>0</y>
      <width>541</width>
-     <height>30</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -325,10 +325,22 @@
    <property name="text">
     <string>New</string>
    </property>
+   <property name="toolTip">
+    <string>Rest all inputs</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
   </action>
   <action name="actionSave">
    <property name="text">
     <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save your data!</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
    </property>
   </action>
   <action name="actionPrint">
@@ -344,6 +356,12 @@
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
+   </property>
+   <property name="toolTip">
+    <string>Exit the application</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
    </property>
   </action>
  </widget>
