@@ -148,7 +148,8 @@ void MainWindow::save_to_file(){
     else{
         QFile file(file_name);
         if(!file.open(QIODevice::WriteOnly)) {
-            QMessageBox::information(this, tr("Unable to open file"),
+            QMessageBox::information(this,
+                                     tr("Unable to open file"),
                                      file.errorString());
             return;
         }
@@ -160,7 +161,9 @@ void MainWindow::save_to_file(){
 }
 
 void MainWindow::load_from_file(){
-    QString file_name = QFileDialog::getOpenFileName(this, tr("Open fitness file"), "", tr("Fitness file (*.fit);;All Files (*)"));
+    QString file_name = QFileDialog::getOpenFileName(this,
+                                                     tr("Open fitness file"), "",
+                                                     tr("Fitness file (*.fit);;All Files (*)"));
     if (file_name.isEmpty()){
             return;
     }
