@@ -44,6 +44,10 @@ private:
     void kilo_label(double kilo_cal);
     void load_from_file();
     void save_to_file();
+    void clear_all();
+    void load_data(QString bmi_in, QString bmr_in, QString kilo_in, QString gender_combo_in, double age_spin_in,
+                   double weight_spin_in, QString weight_combo_in,
+                   double height_spin_in, QString height_combo_in);
 
 };
 

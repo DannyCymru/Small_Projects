@@ -118,6 +118,10 @@ void MainWindow::on_actionExit_triggered(){
 //Clears all the variables and ui elements to allow for a fresh gui to interact with
 void MainWindow::on_actionNew_triggered()
 {
+    clear_all();
+}
+
+void MainWindow::clear_all(){
     weight = 30;
     u_height = 0;
     met_or_imp = "Metric";
@@ -135,10 +139,8 @@ void MainWindow::on_actionNew_triggered()
     ui->gender_label->clear();
     ui->bmi_label->clear();
     ui->bmr_label->clear();
-    ui->exercise_combo->clear();
     ui->maintain_label->clear();
 }
-
 void MainWindow::save_to_file(){
     QString file_name = QFileDialog::getSaveFileName(this,
                                                      tr("Save fitness data"), "",
@@ -156,7 +158,10 @@ void MainWindow::save_to_file(){
 
         QDataStream out(&file);
         out.setVersion(QDataStream::Qt_5_0);
-        out << ui->bmi_label->text();
+        //Outstream for all of the data that I want to save
+        out << ui->bmi_label->text() << ui->bmr_label->text() << ui->maintain_label->text()
+            << ui->gender_combo->currentText() << ui->age_spinbox->value() << ui->weight_spinbox->value()
+            << ui->weight_combo->currentText() << ui->height_spinbox->value() << ui->height_combo->currentText();
     }
 }
 
@@ -169,7 +174,6 @@ void MainWindow::load_from_file(){
     }
             else {
             QFile file(file_name);
-            qDebug() << file_name;
             if (!file.open(QIODevice::ReadOnly)) {
             QMessageBox::information(this, tr("Unable to open file"),
                                      file.errorString());
@@ -177,17 +181,41 @@ void MainWindow::load_from_file(){
 }
             QDataStream in(&file);
             in.setVersion(QDataStream::Qt_5_0);
-            ui->bmi_label->clear();
-            QString bmi_label_in;
-            in >> bmi_label_in;
+            clear_all();
 
-            if(bmi_label_in.isEmpty()){
+            //Strings and doubles for all the incoming data
+            QString bmi_in, bmr_in, kilo_in, gender_combo_in,
+                    weight_combo_in, height_combo_in;
+            double age_spin_in, weight_spin_in, height_spin_in;
+
+            //All the incoming data
+            in >> bmi_in >> bmr_in >> kilo_in >> gender_combo_in >> age_spin_in
+               >> weight_spin_in >> weight_combo_in >> height_spin_in >> height_combo_in;
+
+            if(bmi_in.isEmpty()){
                 QMessageBox::information(this, tr("No data in file"),tr("The file you are attempting to open contains no data "));
             } else {
-                ui->bmi_label->setText(bmi_label_in);
+                load_data(bmi_in, bmr_in, kilo_in, gender_combo_in, age_spin_in,
+                          weight_spin_in, weight_combo_in,
+                          height_spin_in, height_combo_in);
             }
 
     }
+}
+
+void MainWindow::load_data(QString bmi_in, QString bmr_in, QString kilo_in, QString gender_combo_in, double age_spin_in,
+                           double weight_spin_in, QString weight_combo_in,
+                           double height_spin_in, QString height_combo_in){
+    ui->bmi_label->setText(bmi_in);
+    ui->bmr_label->setText(bmr_in);
+    ui->maintain_label->setText(kilo_in);
+    ui->gender_combo->setCurrentText(gender_combo_in);
+    ui->age_spinbox->setValue(age_spin_in);
+    ui->weight_spinbox->setValue(weight_spin_in);
+    ui->weight_combo->setCurrentText(weight_combo_in);
+    ui->height_spinbox->setValue(height_spin_in);
+    ui->height_combo->setCurrentText(height_combo_in);
+
 }
 
 void MainWindow::on_actionSave_triggered()
