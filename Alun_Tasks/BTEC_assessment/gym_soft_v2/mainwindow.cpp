@@ -104,7 +104,7 @@ void MainWindow::on_run_clicked(){
     //Conversions and calculations
     bmi=b_c->bmi_calc(weight, u_height, met_or_imp);
     bmi_label(bmi);
-    bmr=b_c->bmr_calc(weight, u_height, age, gender, met_or_imp);
+    bmr=b_c->bmr_switch(weight, u_height, age, gender, met_or_imp);
     bmr_label(bmr);
     kilocal();
     kilo_label(kilo_cal);
