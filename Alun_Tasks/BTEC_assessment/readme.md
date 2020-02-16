@@ -11,7 +11,7 @@ The brief and everything required for the creation of this program is all in the
 To Do
 -----
 
-~~* Rewrite the software to be object orientated.
+~~* Rewrite the software to be object orientated.~~
 
 * Add functionality to allow the user to add multiple people to the program, given all the calculations requirement and then have the software do all the calculations and print it to screen.
 
