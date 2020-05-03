@@ -4,3 +4,7 @@
 Py-Zip/\.idea/
 
 Py-Zip/venv/
+
+build*/
+
+*.user

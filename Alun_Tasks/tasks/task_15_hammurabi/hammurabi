@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+//constant variables
+
+constexpr int min_grain_to_survive {20};
+
+constexpr int max_land_farmable_per_person {15};
+
+constexpr int seed_required_per_acre {2};
+
+//Kingdom Variables
+
+class kingdom {
+
+public:
+
+  	static int k_grain = 3000; 
+  	static int k_area  = 1000;
+
+  	
+  	static int k_year    = 0;  
+  	static int k_harvest = 0;  
+  	static int k_peasants = 100;
+};
+
+int main () {
+
+	while (k_year <= 5) {
+
+		cout << 
+	}
+
+}
