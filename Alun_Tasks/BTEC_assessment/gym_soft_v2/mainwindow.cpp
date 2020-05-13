@@ -203,6 +203,7 @@ void MainWindow::load_from_file(){
     }
 }
 
+//Function to handle taking all the saved information and putting it into the correct UI object
 void MainWindow::load_data(QString bmi_in, QString bmr_in, QString kilo_in, QString gender_combo_in, double age_spin_in,
                            double weight_spin_in, QString weight_combo_in,
                            double height_spin_in, QString height_combo_in){
