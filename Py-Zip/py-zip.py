@@ -1,37 +1,35 @@
 import glob
 import os
+from pathlib import Path
 import zipfile
 
-dirpath = os.getcwd()
-print(dirpath)
-def extension_check(to_check):
-    print(os.path.splitext(to_check)[1][1:])
+dir_path = os.getcwd()
 
-for folder in glob.glob("*.*", recursive=True):
-    if extension_check(folder) == '.cbr':
-           o_path = dirpath + "/" + folder
-           n_path = folder.replace('.cbr', '.rar')
-           os.rename(o_path, n_path)
+for root, dirs, files in os.walk(dir_path):
+    for name in files:
+        path = root + '/' + name
 
-    elif extension_check(folder) == '.CBR':
-            o_path = dirpath + "/" + folder
-            n_path = folder.replace('.CBR', '.rar')
-            os.rename(o_path, n_path)
+        if name.endswith('.zip'):
+            zip_location = os.path.abspath(path)
+            zip_ref = zipfile.ZipFile(zip_location, 'r')
+            new_folder = os.path.splitext(zip_location)[0][0:]
+            os.mkdir(new_folder)
+            zip_ref.extractall(new_folder)
+            zip_ref.close()
+            os.remove(zip_location)
 
-    elif extension_check(folder) == '.CBZ':
-            o_path = dirpath + "/" + folder
-            n_path = folder.replace('.cbz', '.zip')
-            os.rename(o_path, n_path)
+        elif name.endswith('.cbr'):
+            n_path = path.replace('.cbr', '.rar')
+            os.rename(path, n_path)
 
-    elif extension_check(folder) == '.zip':
-           zip_location = os.path.abspath(folder)
-           zip_ref = zipfile.ZipFile(zip_location, 'r')
-           new_folder = os.path.splitext(zip_location)[0][0:]
-           os.mkdir(new_folder)
-           zip_ref.extractall(new_folder)
-           zip_ref.close()
-           os.remove(zip_location)
+        elif name.endswith('.CBR'):
+            n_path = path.replace('.CBR', '.rar')
+            os.rename(path, n_path)
 
-    else:
-        print("No folders found")
-        exit(0)
+        elif name.endswith('.cbz'):
+            n_path = path.replace('.cbz', '.zip')
+            os.rename(path, n_path)
+
+        else:
+            print("No folders found")
+            exit(0)
