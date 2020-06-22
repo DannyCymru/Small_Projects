@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QObject>
 
 
 double age, weight, u_height, bmi, bmr, kilo_cal;
@@ -118,11 +119,12 @@ void MainWindow::on_actionExit_triggered(){
 //Clears all the variables and ui elements to allow for a fresh gui to interact with
 void MainWindow::on_actionNew_triggered()
 {
-    clear_all();
+
 }
 
+//Clears all boxes and variables
 void MainWindow::clear_all(){
-    weight = 30;
+    weight = 0;
     u_height = 0;
     met_or_imp = "Metric";
     bmi = 0;
@@ -140,14 +142,23 @@ void MainWindow::clear_all(){
     ui->bmi_label->clear();
     ui->bmr_label->clear();
     ui->maintain_label->clear();
+
 }
+
+//Function to save data as a .fit document
 void MainWindow::save_to_file(){
+
+    QFileDialog dialog;
     QString file_name = QFileDialog::getSaveFileName(this,
-                                                     tr("Save fitness data"), "",
-                                                     tr("Fitness File (*.fit);; All Files (*)"));
+                                               tr("Save fitness data"), "",
+                                               "Fitness File (*.fit);; All Files (*)");
     if(file_name.isEmpty())
         return;
     else{
+        //forces saved files to end with .fit
+        if(!file_name.endsWith(".fit")){
+            file_name.append(".fit");
+        }
         QFile file(file_name);
         if(!file.open(QIODevice::WriteOnly)) {
             QMessageBox::information(this,
@@ -165,6 +176,7 @@ void MainWindow::save_to_file(){
     }
 }
 
+//Loads data from txt or .fit file
 void MainWindow::load_from_file(){
     QString file_name = QFileDialog::getOpenFileName(this,
                                                      tr("Open fitness file"), "",

@@ -82,7 +82,7 @@ double bm_calc::bmr_calc(double weight, double height, double age,
 }
 
 //With the correct BMR value we feed this into the kil_cal function
-//with combined with the exercise level of the individual.
+//combined with the exercise level of the individual.
 double bm_calc::kilo_cals(double calc_bmr, double exercise_level){
     double kilo_cal = calc_bmr * exercise_level;
     return kilo_cal;

@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cd82fd5-50f4-4864-b321-b0a4e5a2e037" name="Default Changelist" comment="" />
+    <list default="true" id="3cd82fd5-50f4-4864-b321-b0a4e5a2e037" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +40,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/py-zip.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -27,19 +48,16 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="py-zip" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="Py-Zip" />
+    <configuration name="unzipr" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="unzipr" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="/usr/bin/python3.8" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/py-zip.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unzipr.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
@@ -62,47 +80,58 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="99" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592649205774">
+    <state x="99" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592666862470">
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
-    <state x="99" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1044@0.0.2560.1044" timestamp="1592649205774" />
+    <state x="99" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1044@0.0.2560.1044" timestamp="1592666862470" />
     <state x="423" y="267" key="FileChooserDialogImpl" timestamp="1592649202064">
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
     <state x="423" y="267" key="FileChooserDialogImpl/0.0.2560.1044@0.0.2560.1044" timestamp="1592649202064" />
-    <state width="1249" height="196" key="GridCell.Tab.0.bottom" timestamp="1592653837256">
+    <state width="1249" height="340" key="GridCell.Tab.0.bottom" timestamp="1592733012480">
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
-    <state width="1249" height="196" key="GridCell.Tab.0.bottom/0.0.2560.1044@0.0.2560.1044" timestamp="1592653837256" />
-    <state width="1249" height="196" key="GridCell.Tab.0.center" timestamp="1592653837256">
+    <state width="1249" height="340" key="GridCell.Tab.0.bottom/0.0.2560.1044@0.0.2560.1044" timestamp="1592733012480" />
+    <state width="1249" height="340" key="GridCell.Tab.0.center" timestamp="1592733012480">
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
-    <state width="1249" height="196" key="GridCell.Tab.0.center/0.0.2560.1044@0.0.2560.1044" timestamp="1592653837256" />
-    <state width="1249" height="196" key="GridCell.Tab.0.left" timestamp="1592653837256">
+    <state width="1249" height="340" key="GridCell.Tab.0.center/0.0.2560.1044@0.0.2560.1044" timestamp="1592733012480" />
+    <state width="1249" height="340" key="GridCell.Tab.0.left" timestamp="1592733012480">
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
-    <state width="1249" height="196" key="GridCell.Tab.0.left/0.0.2560.1044@0.0.2560.1044" timestamp="1592653837256" />
-    <state width="1249" height="196" key="GridCell.Tab.0.right" timestamp="1592653837256">
+    <state width="1249" height="340" key="GridCell.Tab.0.left/0.0.2560.1044@0.0.2560.1044" timestamp="1592733012480" />
+    <state width="1249" height="340" key="GridCell.Tab.0.right" timestamp="1592733012480">
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
-    <state width="1249" height="196" key="GridCell.Tab.0.right/0.0.2560.1044@0.0.2560.1044" timestamp="1592653837256" />
-    <state width="1249" height="340" key="GridCell.Tab.1.bottom" timestamp="1592651923923">
+    <state width="1249" height="340" key="GridCell.Tab.0.right/0.0.2560.1044@0.0.2560.1044" timestamp="1592733012480" />
+    <state width="1249" height="340" key="GridCell.Tab.1.bottom" timestamp="1592733012481">
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
-    <state width="1249" height="340" key="GridCell.Tab.1.bottom/0.0.2560.1044@0.0.2560.1044" timestamp="1592651923923" />
-    <state width="1249" height="340" key="GridCell.Tab.1.center" timestamp="1592651923923">
+    <state width="1249" height="340" key="GridCell.Tab.1.bottom/0.0.2560.1044@0.0.2560.1044" timestamp="1592733012481" />
+    <state width="1249" height="340" key="GridCell.Tab.1.center" timestamp="1592733012480">
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
-    <state width="1249" height="340" key="GridCell.Tab.1.center/0.0.2560.1044@0.0.2560.1044" timestamp="1592651923923" />
-    <state width="1249" height="340" key="GridCell.Tab.1.left" timestamp="1592651923923">
+    <state width="1249" height="340" key="GridCell.Tab.1.center/0.0.2560.1044@0.0.2560.1044" timestamp="1592733012480" />
+    <state width="1249" height="340" key="GridCell.Tab.1.left" timestamp="1592733012480">
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
-    <state width="1249" height="340" key="GridCell.Tab.1.left/0.0.2560.1044@0.0.2560.1044" timestamp="1592651923923" />
-    <state width="1249" height="340" key="GridCell.Tab.1.right" timestamp="1592651923923">
+    <state width="1249" height="340" key="GridCell.Tab.1.left/0.0.2560.1044@0.0.2560.1044" timestamp="1592733012480" />
+    <state width="1249" height="340" key="GridCell.Tab.1.right" timestamp="1592733012481">
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
-    <state width="1249" height="340" key="GridCell.Tab.1.right/0.0.2560.1044@0.0.2560.1044" timestamp="1592651923923" />
+    <state width="1249" height="340" key="GridCell.Tab.1.right/0.0.2560.1044@0.0.2560.1044" timestamp="1592733012481" />
     <state x="1583" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1592651206199">
       <screen x="0" y="0" width="2560" height="1044" />
     </state>
