@@ -3,7 +3,6 @@
 #include <QDebug>
 #include <QFileDialog>
 #include <QMessageBox>
-#include <QObject>
 
 
 double age, weight, u_height, bmi, bmr, kilo_cal;
@@ -119,7 +118,7 @@ void MainWindow::on_actionExit_triggered(){
 //Clears all the variables and ui elements to allow for a fresh gui to interact with
 void MainWindow::on_actionNew_triggered()
 {
-
+    clear_all();
 }
 
 //Clears all boxes and variables
