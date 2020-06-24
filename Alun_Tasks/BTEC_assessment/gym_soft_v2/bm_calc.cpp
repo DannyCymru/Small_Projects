@@ -26,6 +26,7 @@ double bm_calc::bmi_calc(double weight, double height, QString met_or_imp){
 Runs an if else depending on the gender then pushes in the correct gender specific numbers for the calculation*/
 double bm_calc::bmr_switch(double weight, double height, double age,
                          QString gender, QString met_or_imp){
+
     double male_bmr, male_weight, male_height, male_age, female_bmr, female_weight, female_height, female_age;
 
     //Male specific BMR calculation values

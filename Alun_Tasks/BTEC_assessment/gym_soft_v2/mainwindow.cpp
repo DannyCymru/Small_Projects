@@ -4,7 +4,6 @@
 #include <QFileDialog>
 #include <QMessageBox>
 
-
 double age, weight, u_height, bmi, bmr, kilo_cal;
 QString gender, met_or_imp = "Metric";
 
@@ -116,9 +115,16 @@ void MainWindow::on_actionExit_triggered(){
 }
 
 //Clears all the variables and ui elements to allow for a fresh gui to interact with
-void MainWindow::on_actionNew_triggered()
-{
+void MainWindow::on_actionNew_triggered(){
     clear_all();
+}
+
+void MainWindow::on_actionSave_triggered(){
+    save_to_file();
+}
+
+void MainWindow::on_actionOpen_triggered(){
+    load_from_file();
 }
 
 //Clears all boxes and variables
@@ -230,12 +236,3 @@ void MainWindow::load_data(QString bmi_in, QString bmr_in, QString kilo_in, QStr
 
 }
 
-void MainWindow::on_actionSave_triggered()
-{
-    save_to_file();
-}
-
-void MainWindow::on_actionOpen_triggered()
-{
-    load_from_file();
-}

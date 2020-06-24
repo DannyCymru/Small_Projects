@@ -33,6 +33,7 @@ private slots:
 
     void on_actionOpen_triggered();
 
+
 private:
     Ui::MainWindow *ui;
     bm_calc *b_c;

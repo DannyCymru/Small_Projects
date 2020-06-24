@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,11 +29,11 @@ CONFIG += \
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    bm_calc.cpp
+        bm_calc.cpp
 
 HEADERS += \
         mainwindow.h \
-    bm_calc.h
+        bm_calc.h
 
 FORMS += \
         mainwindow.ui
