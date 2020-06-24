@@ -17,7 +17,5 @@ To Do
 
 * Allow the user to call on all the gym members added to the software and get their details printed to the screen.
 
-* Finish the save and loading of all the information
-
-* Add the ability to print the results
+~~* Finish the save and loading of all the information~~
 
